@@ -4,13 +4,11 @@ import Image from "next/image"
 import React, { useEffect, useState } from "react"
 
 interface NavigationPageProps {
-  activePage: string
   setActivePage: (page: string) => void
   prevPage: string
 }
 
 export const NavigationPage: React.FC<NavigationPageProps> = ({
-  activePage,
   setActivePage,
   prevPage,
 }) => {

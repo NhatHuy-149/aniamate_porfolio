@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import { Oswald, Roboto } from "next/font/google"
 import "./globals.css"
-import ClientLayout from "@/components/layout/ClientLayout"
 
 const oswald = Oswald({
   variable: "--font-oswald",

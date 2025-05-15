@@ -5,6 +5,9 @@ import React from "react"
 import { useFadeIn } from "@/hooks/useFadeIn"
 import featureIcon1 from "../../../public/icons/features/feature-icon-1.svg"
 import featureIcon2 from "../../../public/icons/features/feature-icon-2.svg"
+import featureIcon3 from "../../../public/icons/features/feature-icon-3.svg"
+import featureIcon4 from "../../../public/icons/features/feature-icon-4.svg"
+
 
 interface Feature {
   icon: string
@@ -34,9 +37,9 @@ const portfolioContent: PortfolioContent = {
   description: "Be what you would seem to be – or, if you'd like it put more simply – never imagine yourself not to be otherwise than what it might appear to others that what you were or might have been was not otherwise than what you had been would have appeared to them to be otherwise.",
   features: [
     { icon: featureIcon1, title: "Eye catching design" },
-    { icon: featureIcon1, title: "Eye catching design" },
-    { icon: featureIcon1, title: "Eye catching design" },
-    { icon: featureIcon1, title: "Eye catching design" }
+    { icon: featureIcon2, title: "Trendy colorsand fonts" },
+    { icon: featureIcon3, title: "Responsive design " },
+    { icon: featureIcon4, title: "Ready-to-use contact form" }
   ],
   projects: [
     {

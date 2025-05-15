@@ -122,9 +122,10 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground overflow-y-hidden;
+    @apply bg-background text-foreground xl:overflow-y-hidden ;
   }
 }
+
 
 .bg-background-gradient {
   background: var(--background-gradient);
@@ -162,7 +163,7 @@ a:hover {
 }
 
 .left-content{
-  @apply pl-[160px] 2xl:pl-[200px] pr-[80px] 2xl:pr-[100px] max-xl:py-[100px];
+  @apply pl-[30px] xl:pl-[160px] 2xl:pl-[200px] pr-[30px] xl:pr-[80px] 2xl:pr-[100px] max-xl:py-[80px];
 }
 
 @keyframes blockmove {

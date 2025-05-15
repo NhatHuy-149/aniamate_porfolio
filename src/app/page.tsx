@@ -49,6 +49,7 @@ export default function HomePage() {
   return (
     <div>
       <Header onMenuClick={handleMenuClick} activePage={activePage} />
+      <div className="mt-[80px] xl:mt-[0]"></div>
       {renderPage()}
     </div>
   )
