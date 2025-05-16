@@ -1,7 +1,7 @@
 "use client"
 import { Typography } from "@/components/ui/typography"
 import Image from "next/image"
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useMemo } from "react"
 
 interface NavigationPageProps {
   setActivePage: (page: string) => void
@@ -14,28 +14,6 @@ export const NavigationPage: React.FC<NavigationPageProps> = ({
 }) => {
   const [loadedImages, setLoadedImages] = useState<number[]>([])
   const [showContent, setShowContent] = useState(false)
-
-  useEffect(() => {
-    // Reset loaded images when navigation opens
-    setLoadedImages([])
-    setShowContent(false)
-
-    // Reset state when component unmounts
-    return () => {
-      setLoadedImages([])
-      setShowContent(false)
-    }
-  }, [])
-
-  useEffect(() => {
-    // Show content after all images are loaded
-    if (loadedImages.length === navigationImages.length) {
-      const timer = setTimeout(() => {
-        setShowContent(true)
-      }, 100) // Small delay after last image loads
-      return () => clearTimeout(timer)
-    }
-  }, [loadedImages])
 
   const navigationItems = [
     {
@@ -60,14 +38,14 @@ export const NavigationPage: React.FC<NavigationPageProps> = ({
     }
   ]
 
-  const navigationImages = [
+  const navigationImages = useMemo(() => [
     "/images/home.webp",
     "/images/about.png",
     "/images/about.png",
     "/images/about.png",
     "/images/about.png",
     "/images/about.png",
-  ]
+  ], [])
 
   const handleImageLoad = (index: number) => {
     setLoadedImages(prev => [...prev, index])
@@ -79,6 +57,28 @@ export const NavigationPage: React.FC<NavigationPageProps> = ({
     const distanceFromEnd = totalImages - 1 - index
     return `${distanceFromEnd * 100}ms`
   }
+
+  useEffect(() => {
+    // Reset loaded images when navigation opens
+    setLoadedImages([])
+    setShowContent(false)
+
+    // Reset state when component unmounts
+    return () => {
+      setLoadedImages([])
+      setShowContent(false)
+    }
+  }, [])
+
+  useEffect(() => {
+    // Show content after all images are loaded
+    if (loadedImages.length === navigationImages.length) {
+      const timer = setTimeout(() => {
+        setShowContent(true)
+      }, 100) // Small delay after last image loads
+      return () => clearTimeout(timer)
+    }
+  }, [loadedImages,navigationImages])
 
   return (
     <section >

@@ -36,7 +36,6 @@ export default function HomePage() {
       case "navigation":
         return (
           <NavigationPage
-            activePage={activePage}
             setActivePage={setActivePage}
             prevPage={prevPage}
           />

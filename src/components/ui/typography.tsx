@@ -89,14 +89,11 @@ const Typography = React.forwardRef<HTMLElement, TypographyProps>(
       lineHeight,
       fontFamily,
       fontWeight,
-      asChild = false,
       children,
       ...props
     },
-    ref
   ) => {
     const Component = variant || "p";
-
     return (
       <Component
         className={cn(
@@ -111,7 +108,6 @@ const Typography = React.forwardRef<HTMLElement, TypographyProps>(
             className,
           })
         )}
-        ref={ref as any}
         {...props}
       >
         {children}
