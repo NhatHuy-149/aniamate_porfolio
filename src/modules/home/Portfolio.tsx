@@ -52,21 +52,21 @@ const portfolioContent: PortfolioContent = {
     },
     {
       image: { src: "/images/features/feature-image-2.png", alt: "Hero Image" },
-      name: "Landing Page",
-      category: "E-commerce",
-      url: "#"
+      name: "Music player app",
+      category: "Music app",
+      url: "https://music-app-wine-nine.vercel.app/"
     },
     {
       image: { src: "/images/features/feature-image-3.png", alt: "Hero Image" },
-      name: "Landing Page",
-      category: "E-commerce",
-      url: "#"
+      name: "Portfolio template",
+      category: "Landing Page",
+      url: "https://nhathuydev.vercel.app/"
     },
     {
       image: { src: "/images/features/feature-image-4.png", alt: "Hero Image" },
-      name: "Landing Page",
-      category: "E-commerce",
-      url: "#"
+      name: "Movie Web",
+      category: "Web",
+      url: "https://jack-san-cinema.vercel.app/login"
     }
   ]
 }
