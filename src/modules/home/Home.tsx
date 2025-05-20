@@ -24,11 +24,11 @@ interface HomeContent {
 
 const homeContent: HomeContent = {
   title: {
-    text: "The",
-    highlight: "new start",
-    suffix: ["modern", "creative", "unique"]
+    text: "Hello,",
+    highlight: "I'm",
+    suffix: ["Nhat Huy", "Frontend Dev"]
   },
-  description: "Our website is under construction, but we are ready to go! We are preparing something amazing and exciting for you. Special surprise for our subscribers only.",
+  description: "I'm a frontend developer with a passion for creating beautiful and functional websites. I'm a quick learner and I'm always looking for new challenges.",
   buttons: [
     { text: "notify me" },
     { text: "explore" }
@@ -60,7 +60,7 @@ const HomeContent = ({ setIsNotifyOpen, setActivePage }: { setIsNotifyOpen: (isO
     >
       {homeContent.title.text} <span className="bg-background-gradient !bg-clip-text">{homeContent.title.highlight}</span>
       <br />
-      is <AnimatedText texts={homeContent.title.suffix} />
+      <AnimatedText texts={homeContent.title.suffix} />
     </Typography>
     <Typography
       fontFamily="roboto"

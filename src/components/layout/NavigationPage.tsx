@@ -39,12 +39,12 @@ export const NavigationPage: React.FC<NavigationPageProps> = ({
   ]
 
   const navigationImages = useMemo(() => [
-    "/images/home.webp",
-    "/images/about.png",
-    "/images/about.png",
-    "/images/about.png",
-    "/images/about.png",
-    "/images/about.png",
+    "/images/menu/image-1.png",
+    "/images/menu/image-2.png",
+    "/images/menu/image-3.png",
+    "/images/menu/image-4.png",
+    "/images/menu/image-5.png",
+    "/images/menu/image-6.png",
   ], [])
 
   const handleImageLoad = (index: number) => {

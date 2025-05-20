@@ -7,6 +7,7 @@ import featureIcon1 from "../../../public/icons/features/feature-icon-1.svg"
 import featureIcon2 from "../../../public/icons/features/feature-icon-2.svg"
 import featureIcon3 from "../../../public/icons/features/feature-icon-3.svg"
 import featureIcon4 from "../../../public/icons/features/feature-icon-4.svg"
+import Link from "next/link"
 
 
 interface Feature {
@@ -21,6 +22,7 @@ interface Project {
   }
   name?: string
   category?: string
+  url?: string
 }
 
 interface PortfolioContent {
@@ -34,27 +36,37 @@ interface PortfolioContent {
 const portfolioContent: PortfolioContent = {
   subtitle: "Portfolio",
   title: "Featured\nprojects",
-  description: "Be what you would seem to be – or, if you'd like it put more simply – never imagine yourself not to be otherwise than what it might appear to others that what you were or might have been was not otherwise than what you had been would have appeared to them to be otherwise.",
+  description: "Welcome to my portfolio! I'm a Frontend Developer who loves building beautiful and functional web applications. Here you'll find a showcase of my personal projects, each crafted with attention to detail and modern web technologies.",
   features: [
-    { icon: featureIcon1, title: "Eye catching design" },
-    { icon: featureIcon2, title: "Trendy colorsand fonts" },
-    { icon: featureIcon3, title: "Responsive design " },
-    { icon: featureIcon4, title: "Ready-to-use contact form" }
+    { icon: featureIcon1, title: "Modern UI/UX Design" },
+    { icon: featureIcon2, title: "Custom Color Schemes" },
+    { icon: featureIcon3, title: "Mobile-First Approach" },
+    { icon: featureIcon4, title: "Interactive Components" }
   ],
   projects: [
     {
-      image: { src: "/images/about.png", alt: "Hero Image" },
+      image: { src: "/images/features/feature-image-1.png", alt: "Hero Image" },
+      name: "Pyramid",
+      category: "E-commerce",
+      url: "https://pyramid.tech/"
+    },
+    {
+      image: { src: "/images/features/feature-image-2.png", alt: "Hero Image" },
+      name: "Portfolio",
+      category: "Landing Page",
+      url: "https://nhathuydev.vercel.app/"
+    },
+    {
+      image: { src: "/images/features/feature-image-3.png", alt: "Hero Image" },
       name: "Project Name",
-      category: "creative"
+      category: "Landing Page",
+      url: "https://nhathuydev.vercel.app/"
     },
     {
-      image: { src: "/images/about.png", alt: "Hero Image" }
-    },
-    {
-      image: { src: "/images/about.png", alt: "Hero Image" }
-    },
-    {
-      image: { src: "/images/about.png", alt: "Hero Image" }
+      image: { src: "/images/features/feature-image-4.png", alt: "Hero Image" },
+      name: "Project Name",
+      category: "Landing Page",
+      url: "https://nhathuydev.vercel.app/"
     }
   ]
 }
@@ -108,7 +120,7 @@ export const Portfolio = () => {
         </div>
         <div className="h-screen relative grid grid-cols-2">
           {portfolioContent.projects.map((project, index) => (
-            <div key={index} className="relative">
+            <Link key={index} href={project.url || ""} className="relative group">
               <Image
                 src={project.image.src}
                 alt={project.image.alt}
@@ -116,7 +128,7 @@ export const Portfolio = () => {
                 className="object-cover object-center"
               />
               {project.name && (
-                <div className="px-4 absolute bottom-[24px] w-full">
+                <div className="px-4 absolute bottom-[-100%] w-full transition-all duration-500 group-hover:bottom-[24px]">
                   <div className="py-[22px] px-[24px] bg-white">
                     <Typography
                       variant="h3"
@@ -137,7 +149,7 @@ export const Portfolio = () => {
                   </div>
                 </div>
               )}
-            </div>
+            </Link>
           ))}
         </div>
       </div>

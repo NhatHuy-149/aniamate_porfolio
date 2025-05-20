@@ -17,33 +17,34 @@ interface ContactInfo {
 }
 
 const contactContent: ContactInfo = {
-  title: "Welcome to our new office",
+  title: "Welcome to my information",
   subtitle: "contact",
   description:
-    "Our website is under construction but we are ready to go! You can call us or leave a request here. We are always glad to see you in our office from 9:00 to 18:00.",
+    "I'm a Frontend Developer, Da Nang, Viet Nam. ",
   sections: [
     {
-      title: "Contact Us",
-      content: "11 West 53 Street\nNew York, NY\n10019",
+      title: "Contact me",
+      content: "Lien Chieu\nDa Nang, Viet Nam",
     },
     {
-      title: "Follow us",
+      title: "My social media",
       content: [
-        { text: "Facebook", link: "https://www.facebook.com/uniq.com" },
-        { text: "Facebook", link: "https://www.facebook.com/uniq.com" },
-        { text: "Facebook", link: "https://www.facebook.com/uniq.com" },
+        { text: "Github", link: "https://github.com/NhatHuy-149" },
+        { text: "Facebook", link: "https://www.facebook.com/nhat.huy.777982" },
+        { text: "Instagram", link: "https://www.instagram.com/_nhathuy_1409_/" },
+
       ],
     },
     {
       title: "Phone",
-      content: [{ text: "+1 212-708-9400", link: "tel:+1 212-708-9400" }],
+      content: [{ text: "+84 364051835", link: "tel:+84 364051835" }],
     },
     {
       title: "Email",
-      content: [{ text: "info@uniq.com", link: "mailto:info@uniq.com" }],
+      content: [{ text: "nhathuydoan1409@gmail.com", link: "mailto:nhathuydoan1409@gmail.com" }],
     },
   ],
-  buttonText: "Say Hello",
+  buttonText: "Just say hello",
 }
 
 const ContactInfo = ({ setIsGreetingOpen }: { setIsGreetingOpen: (isOpen: boolean) => void }) => {

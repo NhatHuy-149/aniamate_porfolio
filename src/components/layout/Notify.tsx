@@ -7,9 +7,9 @@ import { useFadeIn } from "@/hooks/useFadeIn"
 const NotifyForm = ({ setIsNotifyOpen }: { setIsNotifyOpen: (isOpen: boolean) => void }) => {
   const { fadeInClass } = useFadeIn()
   return (
-    <div className={`w-full left-content m-auto flex flex-col justify-center items-center ${fadeInClass}`}>
+    <div className={`w-full left-content m-auto flex flex-col justify-center items-start ${fadeInClass}`}>
       <button
-        className="group self-start mb-8 text-white text-3xl font-light hover:opacity-80 hover:cursor-pointer relative w-8 h-8"
+        className="group self-start mb-20 text-white text-3xl font-light hover:opacity-80 hover:cursor-pointer relative w-8 h-8"
         aria-label="Close"
         onClick={() => setIsNotifyOpen(false)}
       >

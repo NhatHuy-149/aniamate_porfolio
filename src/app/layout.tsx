@@ -13,8 +13,8 @@ const roboto = Roboto({
 })
 
 export const metadata: Metadata = {
-  title: "Uniq",
-  description: "Uniq landing page",
+  title: "Nhat Huy",
+  description: "Nhat Huy's portfolio",
 }
 
 export default function RootLayout({

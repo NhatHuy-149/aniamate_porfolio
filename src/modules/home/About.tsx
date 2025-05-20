@@ -13,6 +13,7 @@ interface Skill {
 interface AboutContent {
   subtitle: string
   title: string
+  highlight: string
   description: string
   skills: Skill[]
   image: {
@@ -22,13 +23,14 @@ interface AboutContent {
 }
 
 const aboutContent: AboutContent = {
-  subtitle: "about us",
-  title: "Just awesome\ntemplate",
-  description: "I wonder if I've been changed in the night? Let me think. Was I the same when I got up this morning? I almost think I can remember feeling a little different. But if I'm not the same, the next question is 'Who in the world am I?' Ah, that's the great puzzle!",
+  subtitle: "about me",
+  title: "Hello, ",
+  highlight: "I'm Nhat Huy!",
+  description: "A motivated frontend developer with 2+ years of experience specializing in building responsive, high-performance websites and user interfaces. Proficient in ReactJS, NextJS, and GatsbyJS. Quick learner with strong problem-solving skills and a solid foundation in modern frontend development.",
   skills: [
-    { label: "Design", value: 96 },
-    { label: "Usability", value: 84 },
-    { label: "Development", value: 90 }
+    { label: "Tech stack", value: 90 },
+    { label: "UX/UI", value: 90 },
+    { label: "Communication", value: 90 }
   ],
   image: {
     src: "/images/about.png",
@@ -50,6 +52,7 @@ export const About = () => {
             className="uppercase"
           >
             {aboutContent.subtitle}
+
           </Typography>
           <Typography
             variant="h2"
@@ -59,6 +62,8 @@ export const About = () => {
             className="uppercase"
           >
             {aboutContent.title}
+            <br />
+            {aboutContent.highlight}
           </Typography>
           <Typography fontFamily="roboto" color="primary" className="mt-[34px]">
             {aboutContent.description}
