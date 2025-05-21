@@ -118,7 +118,7 @@ export const Portfolio = () => {
             ))}
           </div>
         </div>
-        <div className="h-screen relative grid grid-cols-2">
+        <div className="h-screen overflow-hidden relative grid grid-cols-2">
           {portfolioContent.projects.map((project, index) => (
             <Link key={index} href={project.url || ""} className="relative group">
               <Image
@@ -128,8 +128,8 @@ export const Portfolio = () => {
                 className="object-cover object-center"
               />
               {project.name && (
-                <div className="px-4 absolute bottom-[-100%] w-full transition-all duration-500 group-hover:bottom-[24px]">
-                  <div className="py-[22px] px-[24px] bg-white">
+                <div className="px-0 md:px-4 absolute bottom-0 md:bottom-[-100%] w-full transition-all duration-500 group-hover:bottom-[24px]">
+                  <div className=" py-4 md:py-[22px] px-3 md:px-[24px] bg-white">
                     <Typography
                       variant="h3"
                       fontFamily="oswald"
